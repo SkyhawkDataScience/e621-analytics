@@ -1,0 +1,9 @@
+# result data should not be checked in
+data*/
+results*/
+
+# temporary files neither
+__pycache__/
+.vscode/
+.Rhistory
+.Rproj.user
