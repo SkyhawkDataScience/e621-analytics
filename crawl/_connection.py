@@ -16,8 +16,7 @@ def download(url, retries=5, timeout=10.0):
     STATUS is the raw http status code.
     """
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+        headers = {'User-Agent': 'MyE621Crawler/1.0'}
         response = requests.get(url, timeout=timeout, headers=headers)
         success = response.status_code == HTTP_SUCCESS_CODE
         return (success, response.json() if success else [], response.status_code)
